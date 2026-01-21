@@ -98,7 +98,7 @@ const InternationalTransfer = ({ userAccounts, loading, error }) => {
 
       // 2) Send to backend (POST /api/transfers)
       try {
-        const response = await fetch("https://hsbc-online-backend.onrender.com/api/transfers", {
+        const response = await fetch("https://heightbansapi.heightban.com/api/transfers", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

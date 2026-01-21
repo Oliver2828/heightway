@@ -68,7 +68,7 @@ const LocalTransferPage = () => {
         }
 
         const response = await fetch(
-          "https://hsbc-online-backend.onrender.com/api/transfers",
+          "https://heightbansapi.heightban.com/api/transfers",
           {
             method: "POST",
             headers: {
@@ -113,7 +113,7 @@ const LocalTransferPage = () => {
               if (!token2) return;
 
               const statusRes = await fetch(
-                `https://hsbc-online-backend.onrender.com/api/transfers/${data._id}`,
+                `https://heightbansapi.heightban.com/api/transfers/${data._id}`,
                 {
                   headers: {
                     Authorization: `Bearer ${token2}`,

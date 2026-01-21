@@ -64,7 +64,7 @@ const LocalTransfer = ({ onClose }) => {
 
       try {
         const response = await axios.get(
-          "https://hsbc-online-backend.onrender.com/api/user/me",
+          "https://heightbansapi.heightban.com/api/user/me",
           {
             headers: {
               Authorization: `Bearer ${token}`,
