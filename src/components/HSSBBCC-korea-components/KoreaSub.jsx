@@ -27,7 +27,7 @@ function KoreaSub() {
       <div className='bg-white grid grid-cols-12 h-auto md:h-[9vh] py-4 md:py-0 px-4 md:px-0'>
         <div className='flex col-span-12 md:col-span-2 justify-center md:justify-end items-center md:pl-[40px]'>
           <a href="/korea">
-            <div className='bg-[url(././assets/Hssbbcc.jpg)] bg-center bg-contain w-[100px] h-[40px] bg-no-repeat'></div>
+            <div className='bg-[url(././assets/hsbc-logo.svg)] bg-center bg-contain w-[100px] h-[40px] bg-no-repeat'></div>
           </a>
         </div>
         
@@ -40,7 +40,7 @@ function KoreaSub() {
                 className='relative'
                 whileHover="hover"
               >
-                <motion.span variants={linkVariants} className='text-base md:text-[20px]'>HSBC in Korea</motion.span>
+                <motion.span variants={linkVariants} className='text-base md:text-[20px]'>HSBC in Germany</motion.span>
                 <motion.div
                   className='absolute bottom-0 left-0 h-px bg-black'
                   variants={underlineVariants}

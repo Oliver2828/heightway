@@ -21,7 +21,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/*" element={<HomeLayout />} />
 
         {/* 2) HSBC Korea */}
-        <Route path="/korea/*" element={<KoreaLayout />} />
+        <Route path="/germany/*" element={<KoreaLayout />} />
 
         {/* 3) Global Market */}
         <Route path="/market/*" element={<MarketLayout />} />

@@ -4,7 +4,7 @@ import videoSrc from "../../assets/hssbbcc.mp4";
 const Korea2 = () => {
   return (
     <div className="bg-white py-12 px-6 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-light mb-10">HSBC in Korea</h1>
+      <h1 className="text-3xl font-light mb-10">HSBC in Germany</h1>
 
       {/* Enlarged container with gray background */}
       <div className="bg-gray-200 p-10 rounded-xl shadow-xl flex justify-center">

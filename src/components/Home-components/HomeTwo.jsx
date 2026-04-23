@@ -63,12 +63,12 @@ const HomeTwo = () => {
                   className="flex items-center gap-2 hover:underline"
                   onClick={e => handleLinkClick(e, '/corporate-card')}
                 >
-                  HSBC's first co-branded corporate card launches in Korea
+                  HSBC's first co-branded corporate card launches in Germany
                   <MdArrowForwardIos className="hidden md:block flex-shrink-0 mt-1" />
                 </a>
               </h3>
               <p className="text-sm md:text-base text-gray-600">
-                HSBC launched the first co-branded corporate credit card in Korea, in partnership with Kookmin Card (KB), one of the top Korean card issuing companies, in March 2021.
+                HSBC launched the first co-branded corporate credit card in Germany, in partnership with Kookmin Card (KB), one of the top Korean card issuing companies, in March 2021.
               </p>
             </div>
           </div>
@@ -104,7 +104,7 @@ const HomeTwo = () => {
                 </a>
               </h2>
               <p className="text-sm md:text-base text-gray-600">
-                HSBC connects Korean and multinational companies to opportunities in the world based on the extensive global network and the expertise in the Korean market. HSBC in Korea also provides tailored financial solutions to Korea's financial institutions and public sector companies.
+                HSBC connects Germany and multinational companies to opportunities in the world based on the extensive global network and the expertise in the German market. HSBC in Germany also provides tailored financial solutions to Germany's financial institutions and public sector companies.
               </p>
             </div>
           </div>

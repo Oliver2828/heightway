@@ -56,7 +56,7 @@ function HomeOne() {
                        font-light leading-tight'
             variants={textVariants}
           >
-            Welcome to HSBC Korea
+            Welcome to HSBC Germany
           </motion.h2>
           
           <motion.h5 
@@ -73,10 +73,10 @@ function HomeOne() {
                        max-w-3xl'
             variants={textVariants}
           >
-            HSBC connects Korean and multinational companies to opportunities 
+            HSBC connects Germany and multinational companies to opportunities 
             in the world based on the extensive global network and the expertise 
-            in the Korean market. HSBC in Korea also provides tailored financial 
-            solutions to Korea's financial institutions and public sector companies.
+            in the German market. HSBC in Germany also provides tailored financial 
+            solutions to Germany's financial institutions and public sector companies.
           </motion.p>
       </motion.div>
     </motion.div>

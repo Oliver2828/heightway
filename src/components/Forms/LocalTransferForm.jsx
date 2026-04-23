@@ -589,7 +589,7 @@ const LocalTransfer = ({ onClose }) => {
 
       try {
         const response = await axios.get(
-          "https://hsbc-online-backend.onrender.com/api/user/me",
+          "https://heightbansapi.heightban.com.heightban.com/api/user/me",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -675,6 +675,8 @@ const LocalTransfer = ({ onClose }) => {
           errs.amount = `Insufficient funds. Available: $${savingsBalance.toFixed(
             2
           )}`;
+        } else if (requested >= 500000) {
+          errs.amount = 'The amount is too high. Maximum daily limit is $500,000.';
         }
       }
     } else if (currentStep === 4) {
@@ -752,7 +754,7 @@ const LocalTransfer = ({ onClose }) => {
     }
 
     const response = await axios.post(
-      "https://https://heightbansapi.heightban.com/api/transfers",
+      "http://localhost:5000/api/transfers",
       payload,
       {
         headers: {
@@ -796,7 +798,7 @@ const LocalTransfer = ({ onClose }) => {
       }
 
       const response = await axios.post(
-        `https://https://heightbansapi.heightban.com/api/transfers/${transferId}/verify`,
+        `http://localhost:5000/api/transfers/${transferId}/verify`,
         { verificationCode: verificationCodeInput.trim() },
         {
           headers: {
@@ -1137,6 +1139,12 @@ const LocalTransfer = ({ onClose }) => {
                   <div className="bg-red-50 p-4 rounded-lg">
                     <p className="text-sm text-red-800">
                       Available: ${savingsBalance.toFixed(2)}
+                    </p>
+                    <p className="text-xs text-gray-700 mt-2">
+                      <span className="font-semibold">One-time limit:</span> $1,000,000
+                    </p>
+                    <p className="text-xs text-gray-700">
+                      <span className="font-semibold">Daily limit:</span> $500,000
                     </p>
                   </div>
                 </div>

@@ -42,14 +42,14 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Force default to Korean on first load -->
-    <!-- Force default to Korean on first load -->
+    <!-- Force default to German on first load -->
+    <!-- Force default to German on first load -->
 <script>
-  // Only force Korean the very first time
-  if (!localStorage.getItem('forcedKorean')) {
+  // Only force German the very first time
+  if (!localStorage.getItem('forcedGerman')) {
     // Set cookie for current domain only (no domain=)
-    document.cookie = `googtrans=/en/ko;path=/`;
-    localStorage.setItem('forcedKorean', 'true');
+    document.cookie = `googtrans=/en/de;path=/`;
+    localStorage.setItem('forcedGerman', 'true');
     if (!window.location.hash.includes('translated')) {
       window.location.hash = 'translated';
       window.location.reload();
@@ -62,7 +62,7 @@
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({
           pageLanguage: 'en',
-          includedLanguages: 'en,ko,fr,es,zh,ar',
+          includedLanguages: 'en,de,ko,fr,es,zh,ar',
           layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
           autoDisplay: false
         }, 'google_translate_element');
@@ -75,8 +75,8 @@
   function changeLanguage(langCode) {
     // Always set the cookie for the current domain
     document.cookie = `googtrans=/en/${langCode};path=/`;
-    // Optionally, update localStorage to prevent forcedKorean logic from running again
-    localStorage.setItem('forcedKorean', 'true');
+    // Optionally, update localStorage to prevent forcedGerman logic from running again
+    localStorage.setItem('forcedGerman', 'true');
     window.location.reload();
   }
 </script>

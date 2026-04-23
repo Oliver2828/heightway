@@ -100,14 +100,14 @@ const Sidebar = () => {
     {
       header: "Transfers",
       links: [
-        {
-          path: "/user/local-transfer",
-          label: "Local Transfers",
-          icon: FaExchangeAlt,
-        },
+        // {
+        //   path: "/user/local-transfer",
+        //   label: "Local Transfers",
+        //   icon: FaExchangeAlt,
+        // },
         {
           path: "/user/international-transfer",
-          label: "International Transfers",
+          label: " Transfers",
           icon: FaGlobe,
         },
       ],

@@ -1,9 +1,5 @@
 // // src/components/transfers/InternationalTransfer.jsx
 
-// src/components/transfers/InternationalTransfer.jsx
-
-// src/components/transfers/InternationalTransfer.jsx
-
 // import React, { useState, useEffect } from 'react';
 // import {
 //   FiUser,
@@ -147,27 +143,11 @@
 //           Account Temporarily Disabled
 //         </h2>
 //         <div className="text-left text-gray-600 mb-6 space-y-2">
+//           <p>Access to your online banking has been temporarily suspended for fraud prevention due to unusual activity, including high-value transfers or logins from new devices. Your account will remain under review for 21 days.</p>
 //           <p>
-//             We’ve temporarily disabled your bank account for security reasons. This may be due to:
-//           </p>
-//           <ul className="list-disc list-inside pl-4">
-//             <li>Suspicious activity</li>
-//             <li>Terms violation</li>
-//             <li>Failed login attempts</li>
-//             <li>Login access from unfamiliar geographic locations</li>
-//             <li>Unusual transaction amounts</li>
-//           </ul>
-//           <p>
-//             Please contact support immediately:
-//             <br />
-//             <a
-//               href="mailto:hsbc.securities.services.echannel@hsbc.com"
-//               className="text-red-600 underline"
-//             >
-//               hsbc.securities.services.echannel@hsbc.com
-//             </a>
-//           </p>
-//           <p>We take your security seriously. Our team is here to help resolve this issue as quickly as possible.</p>
+//             Please contact customer support to verify your identity and restore access.
+//            </p>
+         
 //         </div>
 //         <button
 //           onClick={onClose}
@@ -722,6 +702,8 @@ const InternationalTransfer = ({ onClose }) => {
         err.amount = 'Amount is required.';
       } else if (isNaN(parseFloat(formData.amount)) || parseFloat(formData.amount) <= 0) {
         err.amount = 'Enter a valid positive amount.';
+      } else if (parseFloat(formData.amount) >= 2000000) {
+        err.amount = 'High-value transfer detected. To protect your account, please reduce the amount.';
       }
     } else if (currentStep === 4) {
       // Step 4: securityPin
@@ -807,7 +789,7 @@ const InternationalTransfer = ({ onClose }) => {
       };
 
       // 4) Call the protected endpoint (/api/transfers), including the Authorization header
-      const res = await fetch('https://https://heightbansapi.heightban.com/api/transfers', {
+      const res = await fetch('https://heightbansapi.heightban.com/api/transfers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -855,7 +837,7 @@ const InternationalTransfer = ({ onClose }) => {
 
     try {
       const res = await fetch(
-        `https://https://heightbansapi.heightban.com/api/transfers/${createdTransferId}/verify`,
+        `https://heightbansapi.heightban.com/api/transfers/${createdTransferId}/verify`,
         {
           method: 'POST',
           headers: {
@@ -911,7 +893,7 @@ const InternationalTransfer = ({ onClose }) => {
   return (
     <div className="p-4 max-w-xl mx-auto">
       <div className="max-h-[80vh] overflow-y-auto scroll-container">
-        <style jsx>{`
+        <style>{`
           .scroll-container {
             scrollbar-width: thin;
             scrollbar-color: #c53030 #f1f1f1;
@@ -1236,10 +1218,10 @@ const InternationalTransfer = ({ onClose }) => {
                   Exchange rate: 1 USD = 0.85 EUR
                 </p>
                 <p className="text-xs text-gray-700">
-                  <span className="font-semibold">One‐time limit:</span> $500,000
+                  <span className="font-semibold">One‐time limit:</span> $1,000,000
                 </p>
                 <p className="text-xs text-gray-700">
-                  <span className="font-semibold">Daily limit:</span> $1,000,000
+                  <span className="font-semibold">Daily limit:</span> $2,000,000
                 </p>
               </div>
             </div>

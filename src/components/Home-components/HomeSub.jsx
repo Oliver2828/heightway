@@ -55,7 +55,7 @@ function HomeSub() {
   }
 
    const items = [
-    { label: 'HSBC Korea',     path: '/korea' },
+    { label: 'HSBC Germany',     path: '/germany' },
     { label: 'Global Markets', path: '/market' },
     { label: 'Global Banking', path: '/banking' },
   ]

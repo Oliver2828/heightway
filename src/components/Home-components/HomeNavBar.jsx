@@ -4,13 +4,15 @@ import { useNavigate } from 'react-router-dom'
 
 function HomeNavBar() {
   const [showLangOptions, setShowLangOptions] = useState(false)
-  const [selectedLang, setSelectedLang] = useState('Korean')
+  const [selectedLang, setSelectedLang] = useState('German')
   const [showPopup, setShowPopup] = useState(false)
   const navigate = useNavigate()
 
   const languages = [
+    { code: 'de', name: 'German',  flag: '🇩🇪' },
     { code: 'ko', name: 'Korean',  flag: '🇰🇷' },
     { code: 'en', name: 'English', flag: '🇺🇸' },
+   
     { code: 'fr', name: 'French',  flag: '🇫🇷' },
     { code: 'es', name: 'Spanish', flag: '🇪🇸' },
     { code: 'ar', name: 'Arabic',  flag: '🇸🇦' },

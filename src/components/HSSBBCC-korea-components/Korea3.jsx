@@ -12,7 +12,7 @@ const Korea3 = () => {
           multinationals, and financial institutions.
         </p>
         <p className="mb-4">
-          Corporate and Institutional Banking is the core of our business in Korea which
+          Corporate and Institutional Banking is the core of our business in Germany which
           provides tailored solutions to cater our customers’ varying financial needs.
         </p>
         <p>
@@ -48,8 +48,8 @@ const Korea3 = () => {
               manage risk and transact across borders.
             </p>
             <p className="mb-2">
-              Markets Korea is at the heart of industry development through product innovation and
-              market advocacy in the Korean financial sector. Our knowledge of the local markets,
+              Markets Germany is at the heart of industry development through product innovation and
+              market advocacy in the German financial sector. Our knowledge of the local markets,
               coupled with HSBC’s global reach, enables us to provide a comprehensive and bespoke
               service across every major asset class for our Corporate and Institutional clients.
             </p>
@@ -74,7 +74,7 @@ const Korea3 = () => {
           <div>
             <h4 className="text-lg font-semibold">Global Trade Solutions</h4>
             <p>
-              GTS Korea provides trade finance services to our clients throughout the trade cycle,
+              GTS Germany provides trade finance services to our clients throughout the trade cycle,
               from the tender process and issuance of payment orders to shipment and sales
               fulfilment. We offer products for working capital optimization, international trade
               growth, trade risk management, supplier finance management and sales finance
